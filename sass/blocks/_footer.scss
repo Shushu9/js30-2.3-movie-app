@@ -1,0 +1,40 @@
+footer {
+    background: rgba(0, 0, 0, 1);
+}
+
+.footer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__info {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+    }
+
+    &__github {
+        padding-left: 20px;
+        text-decoration: none;
+        transition: all 400ms ease;
+
+        &:hover {
+            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+            text-decoration: underline;
+        }
+    }
+
+
+    &__rss {
+        transition: all 400ms ease;
+
+        img {
+            max-height: 50px;
+        }
+
+        &:hover {
+            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+        }
+    }
+}

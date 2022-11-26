@@ -1,0 +1,37 @@
+@media (max-width: 767px) {
+    .header {
+        &__title {
+            margin-left: 10px;
+            font-size: 22px;
+        }
+    }
+
+    .subheader {
+        .quote {
+            flex-direction: column;
+            align-self: center;
+
+            .btn {
+                margin: 10px auto 0 auto;
+
+                width: 140px;
+            }
+
+        }
+
+
+    }
+}
+
+
+@media (max-width: 575px) {
+    .header {
+        &__logo {
+            margin-right: 5px;
+        }
+
+        &__title {
+            display: none;
+        }
+    }
+}
