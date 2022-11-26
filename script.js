@@ -1,19 +1,15 @@
 'use strict'
-
-// console.log("Самооценка pt1:\n1. Вёрстка +10; \n2. При загрузке приложения на странице отображаются полученные от API изображения +10\n3. Если в поле поиска ввести слово и отправить поисковый запрос, на странице отобразятся изображения соответствующей тематики, если такие данные предоставляет API +10\n4. Активный в данный момент интерактивный элемент выделяется стилем +10\n5. Кнопка Play/Pause +20\n6. Внизу табы переключающие жанр = дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10\n Итог: 70 баллов.");
-
-
+// console.log("Самооценка pt4 цитаты:\n1. Вёрстка +10; \n2. При загрузке страницы приложения отображается рандомная цитата +10\n3. При перезагрузке страницы цитата обновляется (заменяется на другую) +10\n4. Есть кнопка, при клике по которой цитата обновляется (заменяется на другую) +10\n5. Смена цитаты сопровождается любым другим эффектом, например,  меняется фоновый цвет страницы +10\n Итог: 50 баллов.");
+// console.log("Самооценка pt6 фильмы:\n1. Вёрстка +10; \n2. При загрузке приложения на странице отображаются карточки фильмов с полученными от API данными +10\n3. Если в поле поиска ввести слово и отправить поисковый запрос, на странице отобразятся карточки фильмов, в названиях которых есть это слово, если такие данные предоставляет API +10\n4. Поиск +30\n5. Доп функционал: если Api не предоставляет данные по запросу поиска, то пользователь видит ошибку. Если кликнуть на карточку фильма, то произойдет переход на страницу фильма на imdb +10\n Итог: 60 баллов.");
 
 
 
 
-
+/// qoutes 
 
 const quoteBtn = document.querySelector('.btn'),
     quoteBackground = document.querySelector('.subheader');
 
-
-/// qoutes 
 
 async function getQuote() {
     const url = 'https://type.fit/api/quotes';
@@ -57,6 +53,8 @@ quoteBtn.addEventListener("click", toggleBg);
 
 
 ////Cards 
+
+
 const inputField = document.querySelector('#input'),
     inputClose = document.querySelector('#close'),
     inputSearch = document.querySelector('#search');
@@ -134,65 +132,6 @@ function renderCards(item) {
 
 
 
-///old code
-
-// function cards() {
-    // Используем классы для создание карточек меню
-
-    // class MenuCard {
-    //     constructor(src, alt, title, descr, price, parentSelector, ...classes) {
-    //         this.src = src;
-    //         this.alt = alt;
-    //         this.title = title;
-    //         this.descr = descr;
-    //         this.price = price;
-    //         this.classes = classes;
-    //         this.parent = document.querySelector(parentSelector);
-    //         this.transfer = 60;
-    //     }
-
-
-        // render() {
-        //     const element = document.createElement('div');
-
-        //     if (this.classes.length === 0) {
-        //         this.classes = "menu__item";
-        //         element.classList.add(this.classes);
-        //     } else {
-        //         this.classes.forEach(className => element.classList.add(className));
-        //     }
-
-        //     element.innerHTML = `
-        //         <img src=${this.src} alt=${this.alt}>
-        //         <h3 class="menu__item-subtitle">${this.title}</h3>
-        //         <div class="menu__item-descr">${this.descr}</div>
-        //         <div class="menu__item-divider"></div>
-        //         <div class="menu__item-price">
-        //             <div class="menu__item-cost">Цена:</div>
-        //             <div class="menu__item-total"><span>${this.price}</span> руб/день</div>
-        //         </div>
-        //     `;
-        //     this.parent.append(element);
-        // }
-    // }
-
-    // getResource('http://localhost:3000/menu')
-    //     .then(data => {
-    //         data.forEach(({ img, altimg, title, descr, price }) => {
-    //             new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
-    //         });
-    //     });
-
-    // new MenuCard(
-    //     "img/tabs/vegy.jpg",
-    //     "vegy",
-    //     'Меню "Фитнес"',
-    //     'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
-    //     9,
-    //     ".menu .container"
-    // ).render();
-
-// }
 
 
 
